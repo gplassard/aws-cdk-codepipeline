@@ -3,5 +3,4 @@ version: 0.2
 phases:
   build:
     commands:
-      - ls
-      - echo 'Hello World'
+      - echo 'Deploying on env $ENV'

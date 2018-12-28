@@ -1,7 +1,7 @@
 import cdk = require("@aws-cdk/cdk");
 import codebuild = require("@aws-cdk/aws-codebuild");
 
-export class HelloCdkStack extends cdk.Stack {
+export class TestStack extends cdk.Stack {
   constructor(parent: cdk.App, name: string, props?: cdk.StackProps) {
     super(parent, name, props);
 
@@ -18,9 +18,10 @@ export class HelloCdkStack extends cdk.Stack {
     });
 
     new codebuild.Project(this, "MyProject", {
-      projectName: "MyProject",
+      projectName: name,
       badge: true,
-      source: source
+      source: source,
+      buildSpec: 'test-buildspec.yml'
     });
   }
 }
