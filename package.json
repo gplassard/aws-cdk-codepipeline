@@ -11,6 +11,7 @@
     "deploy": "npm run build && npm run cdk deploy -- --profile perso"
   },
   "devDependencies": {
+    "@aws-cdk/aws-cloudformation": "^0.21.0",
     "@aws-cdk/aws-codebuild": "^0.21.0",
     "@aws-cdk/aws-codepipeline": "^0.21.0",
     "@aws-cdk/cdk": "^0.21.0",
